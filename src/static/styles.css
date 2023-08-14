@@ -1,0 +1,190 @@
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --purple: #7C31db;
+  --search-background: #F0F0F0;
+  --tertiary: #BBBBBB;
+  --secondary: #EAEAEA;
+  --card-purple: #4E0BA1;
+  --card-bg: #1E212D;
+  --black-lessopacity: rgba(0, 0, 0, 0.25);
+}
+
+body{
+  margin: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Breeserif';
+  src: url('BreeSerif-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Passionone';
+  src: url('PassionOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('Poppins-Medium.ttf');
+}
+
+nav{
+  height: 100px;
+  width: 100%;
+  background-color: #ACACAC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px min(165px,8.5vw);
+}
+
+.logoContainer{
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  width: 80px;
+  height: 80px;
+  background-image: url('logo.svg');
+}
+
+.logoHeader{
+  font-family: 'Passionone';
+  font-size: 48px;
+  color: var(--card-bg);
+}
+
+
+
+.searchContainer form{
+  display: flex;
+  margin-right: min(8vw,150px);
+}
+
+.searchBox{
+  flex-shrink: 1;
+  width: 533px;
+  background-color: var(--search-background);
+  height: 42px;
+  outline: none;
+  border: none;
+  box-shadow: inset 0px 2px 2px var(--black-lessopacity);
+  border-radius: 5px 0px 0px 5px;
+  padding: 7.13px 0px  4.88px 17px;
+  font-size: 20px;
+}
+
+.searchBox::placeholder{
+  color: rgba(0, 0, 0, 0.537);
+}
+
+.searchButton{
+  width: 97px;
+  height: 42px;
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple);
+  font-size: 20px;
+  color: white;
+  font-family: 'Poppins';
+  box-shadow: 0px 2px 2px 0px var(--black-lessopacity);
+  position: relative;
+  cursor: pointer;
+}
+
+.searchButton:hover{
+  background-color: var(--card-purple);
+}
+
+.toggleButton{
+  border: 0px;
+  width: 100px;
+  height: 41px;
+  border-radius: 5px;
+  background-color: var(--purple);
+  color: white;
+  position: relative;
+  box-shadow: inset 0px 4px 4px var(--black-lessopacity);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.toggleButton > .toggleLetter{
+  font-size: 32px;
+  font-family: 'Poppins';
+  position: absolute;
+  transition: opacity .20s ease-out;
+}
+
+.toggleButton > .toggleLetter:first-of-type{
+  top: -3px;
+  left: 15px;
+  opacity: 0;
+}
+
+.toggleButton > span{
+  position: absolute;
+  font-size: 24px;
+  font-family: 'Breeserif';
+  top: -1px;
+  left: 55px;
+  transition: transform .25s ease-out;
+}
+
+.toggleButton > .toggleLetter:nth-of-type(2){
+  top: -2px;
+  right: 15px;
+}
+
+
+.tempContainer{
+  width: 45px;
+  height: 39px;
+  background-color: var(--search-background);
+  z-index: 1;
+  position: absolute;
+  border-radius: 4px;
+  top: 1px;
+  left: 1px;
+  box-shadow: 0px 4px 4px 0px var(--black-lessopacity);
+  transition: transform .25s ease-out;
+}
+
+.tempImage{
+  width: 12.35px;
+  height: 26px;
+  background-image: url('temp.svg');
+  position: absolute;
+  top: 6px;
+  left: 16px;
+}
+
+.toggleButton.toggled > span{
+  transform: translateX(-47px);
+}
+
+.toggleButton.toggled > .toggleLetter:first-of-type{
+  opacity: 1;
+}
+
+.toggleButton.toggled > .toggleLetter:nth-of-type(2){
+  opacity: 0;
+}
+
+.toggleButton.toggled > .tempContainer{
+  transform: translateX(53px);
+}

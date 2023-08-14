@@ -51,7 +51,7 @@ module.exports = {
             presets: [
               [
                 '@babel/preset-env',
-                { targets: '>0.25%', useBuiltIns: 'entry' },
+                { targets: '>0.25%', useBuiltIns: 'entry', corejs: 3  },
               ],
             ],
             plugins: [
