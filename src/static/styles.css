@@ -267,7 +267,7 @@ nav{
 .currentFeel{
   font-size: 20px;
   color: var(--tertiary);
-  margin-top: 20px;
+  margin-top: 30px;
   font-family: 'Poppins';
 }
 
@@ -471,3 +471,62 @@ nav{
   filter: brightness(0) invert(1) hue-rotate(180deg);
 }
 
+.currentWeatherImage.oned{
+  background-image: url('images/onedLogo.svg');
+  
+}
+
+.currentWeatherImage.onen{
+  background-image: url('images/onenLogo.svg');
+  background-position: top 10px right 0px;
+}
+
+.currentWeatherImage.twod{
+  background-color: url('images/sunny.svg');
+  background-position: top 10px right 0px;
+}
+
+.currentWeatherImage.twon{
+  background-image: url('images/twonLogo.svg');
+}
+
+.currentWeatherImage.threed{
+  background-image: url('images/threedLogo.svg');
+    background-position: top 10px right 0px;
+}
+
+.currentWeatherImage.fourd{
+  background-image: url('images/fourdLogo.svg');
+  background-position: top 5px right 0px;
+}
+
+.currentWeatherImage.nined{
+  background-image: url('images/ninedLogo.svg');
+  background-position: top 15px right 0px;
+}
+
+.currentWeatherImage.tend{
+  background-image: url('images/tendLogo.svg');
+  background-position: top 10px right 0px;
+  
+}
+
+.currentWeatherImage.tenn{
+  background-image: url('images/tennLogo.svg');
+  background-position: top 10px right 0px;
+}
+
+.currentWeatherImage.elevend{
+  background-image: url('images/elevendLogo.svg');
+}
+
+.currentWeatherImage.twelved{
+  background-image: url('images/twelvedLogo.svg');
+  background-position: top 5px right 0px;
+  filter: invert(1); 
+}
+
+.currentWeatherImage.fiftyd{
+  background-image: url('images/fiftydLogo.svg');
+  background-position: top 10px right 0px;
+}
