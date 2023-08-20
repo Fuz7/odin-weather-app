@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Fraction  from 'fraction.js';
+import Fraction from 'fraction.js';
 
 export function convertToCelcius(temp) {
   const fraction = new Fraction(5, 9); // Represents 5/9

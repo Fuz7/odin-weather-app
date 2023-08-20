@@ -199,11 +199,11 @@ nav{
 .weatherContainer{
   height: calc(100% - 100px);
   display: grid;
-  grid-template-rows: 610px 1fr;
+  grid-template-rows: 580px 1fr;
 }
 
 .currentWeatherCard{
-  margin-top: 45px;
+  margin-top: 35px;
   justify-self: center;
   width: 1050px;
   height: 500px;
