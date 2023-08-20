@@ -6,7 +6,7 @@ import { convertToCelcius, convertToFahrenheit} from './helpers'
 
 const form = document.getElementById('form');
 const searchBox = document.getElementById('searchBox');
-
+const loader = document.getElementById('loader')
 const currentWeatherHeader = document.getElementById('currentWeatherHeader');
 const currentWeather = document.getElementById('currentWeather');
 const currentImage = document.getElementById('currentWeatherImage');
@@ -293,6 +293,7 @@ async function initiatePhilippinesLocation(){
   updateCurrentCard(location)
   updateForecastCard(forecastData)
   searchBox.value = ''
+  loader.classList.remove('active')
 }
 
 export default initiatePhilippinesLocation

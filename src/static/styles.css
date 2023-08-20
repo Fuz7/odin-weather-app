@@ -17,6 +17,7 @@ body{
   height: 100vh;
   width: 100%;
   background-color: var(--search-background);
+  overflow-y: hidden;
 }
 
 @font-face {
@@ -545,4 +546,43 @@ nav{
 }
 .weatherType.clear-day{
   background-image: url('images/clear-day.svg');
+}
+
+.loader{
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  top: 100px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 100px);
+  z-index: 1;
+  background-color: #cccccc;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.loader::after{
+  content: '';
+  position: absolute;
+  top: 300px;
+  left: calc(50% - 75px);
+  width: 100px;
+  height: 100px;
+  background-color: #cccccc;
+  border: 25px solid #303030;
+  border-top-color: #7C31db;
+  border-radius: 50%;;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+  from { transform: rotate(0turn) }
+  to { transform: rotate(1turn) }
 }
