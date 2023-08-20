@@ -303,7 +303,7 @@ nav{
 .bottomList{
   margin-top: 32px;
   display: flex;
-  gap: 56px;
+  gap: 24px;
 }
 
 .listContainer{
@@ -341,9 +341,7 @@ nav{
   left: 34px;
 }
 
-.uvindexImage ~ div{
-  width: 108px;
-}
+
 
 .humidityImage{
   width: 27px;
@@ -363,10 +361,10 @@ nav{
   background-image: url('images/chanceofrainLogo.svg');
 }
 
-.uvindexImage{
+.pressureImage{
   width: 28px;
   height: 28px;
-  background-image: url('images/uvLogo.svg');
+  background-image: url('images/pressureLogo.svg');
 }
 
 .sunriseImage{
@@ -377,7 +375,6 @@ nav{
 }
 
 .sunsetImage{
-  margin-right: 10px;
   width: 28px;
   height: 28px;
   background-image: url('images/sunsetLogo.svg');
@@ -529,4 +526,23 @@ nav{
 .currentWeatherImage.fiftyd{
   background-image: url('images/fiftydLogo.svg');
   background-position: top 10px right 0px;
+}
+
+.weatherType.rain{
+  background-image: url('images/rain.svg');
+}
+.weatherType.snow{
+  background-image: url('images/snow.svg');
+}
+.weatherType.cloudy{
+  background-image: url('images/cloudy.svg');
+}
+.weatherType.clear-night{
+  background-image: url('images/clear-night.svg');
+}
+.weatherType.partly-cloudy-night{
+  background-image: url('images/partly-cloudy-night.svg');
+}
+.weatherType.clear-day{
+  background-image: url('images/clear-day.svg');
 }
