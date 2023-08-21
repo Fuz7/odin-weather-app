@@ -215,12 +215,57 @@ function setActiveCard(dayType) {
   }
 }
 
+function sortData(data, dayType) {
+  let splicedData;
+
+  switch (dayType) {
+    case 'sunday':
+      break;
+
+    case 'Monday':
+      splicedData = data.splice(0, 6);
+      splicedData.forEach(element=>data.push(element))
+      break;
+
+    case 'Tuesday':
+      splicedData = data.splice(0, 5);
+      splicedData.forEach(element=>data.push(element))
+      break;
+
+    case 'Wednesday':
+      splicedData = data.splice(0, 4);
+      splicedData.forEach(element=>data.push(element))
+
+      break;
+
+    case 'Thursday':
+      splicedData = data.splice(0, 3);
+      splicedData.forEach(element=>data.push(element))
+      break;
+
+    case 'Friday':
+      splicedData = data.splice(0, 2);
+      splicedData.forEach(element=>data.push(element))
+      break;
+
+    case 'Saturday':
+      splicedData = data.splice(0, 1);
+      splicedData.forEach(element=>data.push(element))
+      break;
+
+    default:
+      break;
+  }
+
+  return data;
+}
+
 function updateForecastCard(forecastData) {
   const formattedData = Array.from(forecastData);
   const dayType = format(new Date(), 'EEEE');
   setActiveCard(dayType);
-  console.log(formattedData);
-  formattedData.forEach((data, index) => {
+  const sortedData = sortData(formattedData, dayType);
+  sortedData.forEach((data, index) => {
     const imageContainer =
       document.getElementsByClassName('weatherType')[index];
     imageContainer.className = 'weatherType';
@@ -273,7 +318,6 @@ form.addEventListener('submit', async (e) => {
     const location = await getCurrentLocation(searchBox.value);
     if (location !== false) {
       const forecastData = await getForecastData(location.lat, location.lon);
-      console.log(location);
       updateCurrentCard(location);
       updateForecastCard(forecastData);
       searchBox.value = '';

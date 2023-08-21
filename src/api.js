@@ -28,7 +28,6 @@ async function getCurrentLocation(name) {
 
     location = await location.json();
 
-    console.log(location);
 
     const regionNamesInEnglish = new Intl.DisplayNames(['en'], {
       type: 'region',
@@ -82,7 +81,6 @@ async function getForecastData(latitude, longitude) {
   forecastData = await forecastData.json();
   const forecastDays = Array.from(forecastData.days);
   const currentHour = format(new Date(), 'HH:00:00');
-  console.log(forecastData);
   const filteredForecast = forecastDays.map((day) => {
     const hours = Array.from(day.hours);
     const correctHour = hours.find((hour) => hour.datetime === currentHour);
